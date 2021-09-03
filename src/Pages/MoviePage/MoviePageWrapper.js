@@ -28,7 +28,7 @@ export const Main = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  overflow: visible;
+  overflow: hidden;
   transform: scaleY(0.9);
   font-size: 2.7rem;
   @media (max-width: 1000px) {
