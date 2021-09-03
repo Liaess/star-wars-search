@@ -8,6 +8,7 @@ export default function MoviePage() {
   const { id } = useParams();
   const [informations, setInformations] = useState(false);
   const [charactersResult, setCharacterResult] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const req = axios.get(`https://swapi.dev/api/films/${id}`);
@@ -28,9 +29,10 @@ export default function MoviePage() {
       resultArray = [...resultArray, req.data];
     }
     setCharacterResult(resultArray);
+    setIsLoading(true);
   }, [informations]);
 
-  if (!informations) {
+  if (!isLoading) {
     return (
       <LoadingContainer>
         <Loader src={loadingGif} />
@@ -48,7 +50,7 @@ export default function MoviePage() {
         {charactersResult.length >= 3 ? (
           charactersResult.map((c, i) => (
             <p key={i}>
-              Character{i + 1}:{c.name}
+              Character {i + 1}: {c.name}
             </p>
           ))
         ) : (

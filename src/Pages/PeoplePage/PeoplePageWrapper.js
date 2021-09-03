@@ -30,7 +30,7 @@ export const Main = styled.div`
   right: 0;
   overflow: visible;
   transform: scaleY(0.9);
-  font-size: 2.7rem;
+  font-size: 3rem;
   @media (max-width: 1000px) {
     font-size: 2rem;
   }
