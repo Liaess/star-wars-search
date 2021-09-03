@@ -1,13 +1,16 @@
-# Star Wars Search
+# Star Wars Search ✨
 
 An easy to use website made for Star Wars fan who want to search for a movie or character information.
+
+![Star Wars Preview](public/assets/starwars.gif)
+#### [Try it now!](https://star-wars-search-yann.vercel.app/)
 
 ## About
 
 This is an web application with which lots of people can search for Star Wars informations. Below are the implemented features:
 
-- [x] Search for character information
-- [x] Search for movie information
+- [x] Search for character
+- [x] Search for movie
 - [x] Star wars intro effects
 
 ### Future improvements
