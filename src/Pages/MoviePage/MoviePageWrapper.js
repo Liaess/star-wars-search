@@ -33,6 +33,7 @@ export const Main = styled.div`
   font-size: 2.7rem;
   @media (max-width: 1000px) {
     font-size: 2rem;
+    overflow: visible;
   }
 `;
 
