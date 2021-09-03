@@ -1,7 +1,7 @@
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import MainPage from "./Pages/MainPage";
-import MoviePage from "./Pages/MoviePage/MoviePage";
-import PeoplePage from "./Pages/PeoplePage/PeoplePage";
+import MoviePage from "./Pages/MoviePage";
+import PeoplePage from "./Pages/PeoplePage";
 import GlobalStyles from "./Styles/GlobalStyles";
 
 function App() {

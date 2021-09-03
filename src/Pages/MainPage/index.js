@@ -2,12 +2,7 @@ import DebounceInput from "react-debounce-input";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import logo from "../../assets/logo.png";
-import {
-  Main,
-  SearchArea,
-  Result,
-  EachResult,
-} from "./MainPageWrapper";
+import { Main, SearchArea, Result, EachResult } from "./MainPageWrapper";
 import Footer from "../../Components/Footer";
 import { Link } from "react-router-dom";
 
@@ -74,20 +69,24 @@ export default function MainPage() {
               <option value="Movie">Movie</option>
               <option value="People">People</option>
             </select>
+            <Result showResult={showResult}>
+              {showResult.length ? (
+                showResult.map((r, i) => (
+                  <Link
+                    to={
+                      selectedOption === "People"
+                        ? `/people/${r.url.slice(29)}`
+                        : `/movie/${r.url.slice(28)}`
+                    }
+                  >
+                    <EachResult key={i}>{r.title || r.name}</EachResult>
+                  </Link>
+                ))
+              ) : (
+                <></>
+              )}
+            </Result>
           </SearchArea>
-          <Result showResult={showResult}>
-            {showResult.length ? (
-              showResult.map((r, i) => (
-                <Link to={selectedOption === "People" ? `/people/${r.url.slice(29)}` : `/movie/${r.url.slice(28)}`}>
-                  <EachResult key={i}>
-                    {r.title || r.name}
-                  </EachResult>
-                </Link>
-              ))
-            ) : (
-              <></>
-            )}
-          </Result>
         </div>
       </Main>
       <Footer />

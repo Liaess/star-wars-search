@@ -7,16 +7,26 @@ export const Main = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  div:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   img {
-    width: 400px;
     padding-bottom: 50px;
     padding-left: 10px;
-  }
-  @media (max-width: 600px){
-    img{
-      padding: 0px;
+    animation-name: fadeout;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    @keyframes fadeout {
+      from {
+        width: 0%;
+      }
+      to {
+        width: 40%;
+      }
     }
-
   }
 `;
 
@@ -42,22 +52,6 @@ export const SearchArea = styled.div`
     border: none;
     outline: none;
   }
-  @media (max-width: 600px) {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 60px;
-    input{
-      -webkit-border-radius: 50px;
-      -moz-border-radius: 50px;
-      border-radius: 50px;
-    }
-    select{
-      width: 350px;
-      margin-bottom: 70px;
-    }
-  }
 `;
 
 export const Result = styled.div`
@@ -68,7 +62,7 @@ export const Result = styled.div`
   background-color: #fff;
   gap: 7px;
   margin-left: 20px;
-  margin-bottom: 5px;
+  margin-top: 50px;
   position: absolute;
   overflow-y: auto;
   -webkit-border-bottom-right-radius: 5px;
@@ -77,9 +71,6 @@ export const Result = styled.div`
   -moz-border-radius-bottomleft: 5px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
-  @media (max-width: 600px){
-    margin: 0px;
-  }
 `;
 
 export const EachResult = styled.p`
