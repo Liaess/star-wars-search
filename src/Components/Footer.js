@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -8,12 +7,12 @@ export default function Footer() {
       <Container>
         <h1>Talk to the creator</h1>
         <Redirects>
-          <Link to="https://www.linkedin.com/in/yann-melo/" target="_blank">
+          <a href="https://www.linkedin.com/in/yann-melo/" target="_blank" rel="noreferrer">
             <FaLinkedin />
-          </Link>
-          <Link to="https://github.com/Liaess" target="_blank">
+          </a>
+          <a href="https://github.com/Liaess" target="_blank" rel="noreferrer">
             <FaGithub />
-          </Link>
+          </a>
         </Redirects>
       </Container>
     </Main>
